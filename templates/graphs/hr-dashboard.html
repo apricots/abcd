@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Charts - SB Admin</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+
+    <!-- Add custom CSS here -->
+<!--     <link href="css/sb-admin.css" rel="stylesheet"> -->
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+    <!-- Page Specific CSS -->
+    <link rel="stylesheet" href="http://cdn.oesmith.co.uk/morris-0.4.3.min.css">
+  </head>
+
+  <body>
+<div class='container'>
+    <div id="wrapper">
+
+      <div id="page-wrapper">
+
+        <div class="row">
+          <div class="col-lg-12">
+            <h1>Recent Activity <small>Display Your Data</small></h1>
+            <ol class="breadcrumb">
+              <li><a href="index.html"><i class="fa fa-dashboard"></i> Dashboard</a></li>
+              <li class="active"><i class="fa fa-bar-chart-o"></i> Charts</li>
+            </ol>
+            <div class="alert alert-success">
+              <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+              (3) Employees have requested new deals since you last logged in.
+            </div>
+          </div>
+        </div><!-- /.row -->
+
+
+        <div class="row">
+          <div class="col-lg-12">
+            <h2>Dashboard</h2>
+            <div class="panel panel-primary">
+              <div class="panel-heading">
+                <h3 class="panel-title"><i class="fa fa-bar-chart-o"></i> Employee Activity</h3>
+              </div>
+              <div class="panel-body">
+                <div id="morris-chart-area"></div>
+              </div>
+            </div>
+          </div>
+        </div><!-- /.row -->
+
+        <div class="row">
+          <div class="col-lg-4">
+            <div class="panel panel-primary">
+              <div class="panel-heading">
+                <h3 class="panel-title"><i class="fa fa-long-arrow-right"></i> Used Perq Categories</h3>
+              </div>
+              <div class="panel-body">
+                <div id="morris-chart-donut"></div>
+                <div class="text-right">
+                  <a href="#">View Details <i class="fa fa-arrow-circle-right"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="panel panel-primary">
+              <div class="panel-heading">
+                <h3 class="panel-title"><i class="fa fa-long-arrow-right"></i> Costs to Company</h3>
+              </div>
+              <div class="panel-body">
+                <div id="morris-chart-line"></div>
+                <div class="text-right">
+                  <a href="#">View Details <i class="fa fa-arrow-circle-right"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="panel panel-primary">
+              <div class="panel-heading">
+                <h3 class="panel-title"><i class="fa fa-long-arrow-right"></i> Perq Requests</h3>
+              </div>
+              <div class="panel-body">
+                <div id="morris-chart-bar"></div>
+                <div class="text-right">
+                  <a href="#">View Details <i class="fa fa-arrow-circle-right"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div><!-- /.row -->
+
+        <div class="row">
+          <div class="col-lg-12">
+            <h2>Current Active Deals</h2>
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail green" href="#">
+                    <div class="discount green">
+                        <p class="discount-title">AMC Theatres</p>
+                        <hr>
+                        <p class='description'>Receive 10% off any movie ticket. Not valid on Friday and Saturday nights after 7pm.</p>
+                        <hr>
+                        <center><button type="button" class="btn btn-default">Details</button></center>
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail red" href="#">
+                    <div class="discount red">
+                        <p class="discount-title">AMC Theatres</p>
+                        <hr>
+                        <p class='description'>Receive 10% off any movie ticket. Not valid on Friday and Saturday nights after 7pm.</p>
+                        <hr>
+                        <center><button type="button" class="btn btn-default">Details</button></center>
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail purple" href="#">
+                    <div class="discount purple">
+                        <p class="discount-title">AMC Theatres</p>
+                        <hr>
+                        <p class='description'>Receive 10% off any movie ticket. Not valid on Friday and Saturday nights after 7pm.</p>
+                        <hr>
+                        <center><button type="button" class="btn btn-default">Details</button></center>
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail brown" href="#">
+                    <div class="discount brown">
+                        <p class="discount-title">AMC Theatres</p>
+                        <hr>
+                        <p class='description'>Receive 10% off any movie ticket. Not valid on Friday and Saturday nights after 7pm.</p>
+                        <hr>
+                        <center><button type="button" class="btn btn-default">Details</button></center>
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail green" href="#">
+                    <div class="discount green">
+                        <p class="discount-title">AMC Theatres</p>
+                        <hr>
+                        <p class='description'>Receive 10% off any movie ticket. Not valid on Friday and Saturday nights after 7pm.</p>
+                        <hr>
+                        <center><button type="button" class="btn btn-default">Details</button></center>
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail green" href="#">
+                    <div class="discount green">
+                        <p class="discount-title">AMC Theatres</p>
+                        <hr>
+                        <p class='description'>Receive 10% off any movie ticket. Not valid on Friday and Saturday nights after 7pm.</p>
+                        <hr>
+                        <center><button type="button" class="btn btn-default">Details</button></center>
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail yellow" href="#">
+                    <div class="discount yellow">
+                        <p class="discount-title">AMC Theatres</p>
+                        <hr>
+                        <p class='description'>Receive 10% off any movie ticket. Not valid on Friday and Saturday nights after 7pm.</p>
+                        <hr>
+                        <center><button type="button" class="btn btn-default">Details</button></center>
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail red" href="#">
+                    <div class="discount red">
+                        <p class="discount-title">AMC Theatres</p>
+                        <hr>
+                        <p class='description'>Receive 10% off any movie ticket. Not valid on Friday and Saturday nights after 7pm.</p>
+                        <hr>
+                        <center><button type="button" class="btn btn-default">Details</button></center>
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail purple" href="#">
+                    <div class="discount purple">
+                        <p class="discount-title">AMC Theatres</p>
+                        <hr>
+                        <p class='description'>Receive 10% off any movie ticket. Not valid on Friday and Saturday nights after 7pm.</p>
+                        <hr>
+                        <center><button type="button" class="btn btn-default">Details</button></center>
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail brown" href="#">
+                    <div class="discount brown">
+                        <p class="discount-title">AMC Theatres</p>
+                        <hr>
+                        <p class='description'>Receive 10% off any movie ticket. Not valid on Friday and Saturday nights after 7pm.</p>
+                        <hr>
+                        <center><button type="button" class="btn btn-default">Details</button></center>
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail yellow" href="#">
+                    <div class="discount yellow">
+                        <p class="discount-title">AMC Theatres</p>
+                        <hr>
+                        <p class='description'>Receive 10% off any movie ticket. Not valid on Friday and Saturday nights after 7pm.</p>
+                        <hr>
+                        <center><button type="button" class="btn btn-default">Details</button></center>
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail green" href="#">
+                    <div class="discount green">
+                        <p class="discount-title">AMC Theatres</p>
+                        <hr>
+                        <p class='description'>Receive 10% off any movie ticket. Not valid on Friday and Saturday nights after 7pm.</p>
+                        <hr>
+                        <center><button type="button" class="btn btn-default">Details</button></center>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+          </div>
+        </div><!-- /.row -->
+
+      </div><!-- /#page-wrapper -->
+
+    </div><!-- /#wrapper -->
+  </div>
+
+    <!-- JavaScript -->
+    <script src="js/jquery-1.10.2.js"></script>
+    <script src="js/bootstrap.js"></script>
+
+    <!-- Page Specific Plugins -->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
+    <script src="http://cdn.oesmith.co.uk/morris-0.4.3.min.js"></script>
+    <script src="js/morris/chart-data-morris.js"></script>
+    <script src="js/tablesorter/jquery.tablesorter.js"></script>
+    <script src="js/tablesorter/tables.js"></script>
+    <!--[if lte IE 8]><script src="js/excanvas.min.js"></script><![endif]-->
+	<script src="js/flot/jquery.flot.js"></script>
+	<script src="js/flot/jquery.flot.tooltip.min.js"></script>
+	<script src="js/flot/jquery.flot.resize.js"></script>
+	<script src="js/flot/jquery.flot.pie.js"></script>
+	<script src="js/flot/chart-data-flot.js"></script>
+
+  </body>
+</html>

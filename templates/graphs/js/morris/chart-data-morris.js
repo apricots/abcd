@@ -6,45 +6,45 @@ Morris.Area({
   // Chart data records -- each entry in this array corresponds to a point on
   // the chart.
   data: [
-	{ d: '2012-10-01', visits: 802 },
-	{ d: '2012-10-02', visits: 783 },
-	{ d: '2012-10-03', visits:  820 },
-	{ d: '2012-10-04', visits: 839 },
-	{ d: '2012-10-05', visits: 792 },
-	{ d: '2012-10-06', visits: 859 },
-	{ d: '2012-10-07', visits: 790 },
-	{ d: '2012-10-08', visits: 1680 },
-	{ d: '2012-10-09', visits: 1592 },
-	{ d: '2012-10-10', visits: 1420 },
-	{ d: '2012-10-11', visits: 882 },
-	{ d: '2012-10-12', visits: 889 },
-	{ d: '2012-10-13', visits: 819 },
-	{ d: '2012-10-14', visits: 849 },
-	{ d: '2012-10-15', visits: 870 },
-	{ d: '2012-10-16', visits: 1063 },
-	{ d: '2012-10-17', visits: 1192 },
-	{ d: '2012-10-18', visits: 1224 },
-	{ d: '2012-10-19', visits: 1329 },
-	{ d: '2012-10-20', visits: 1329 },
-	{ d: '2012-10-21', visits: 1239 },
-	{ d: '2012-10-22', visits: 1190 },
-	{ d: '2012-10-23', visits: 1312 },
-	{ d: '2012-10-24', visits: 1293 },
-	{ d: '2012-10-25', visits: 1283 },
-	{ d: '2012-10-26', visits: 1248 },
-	{ d: '2012-10-27', visits: 1323 },
-	{ d: '2012-10-28', visits: 1390 },
-	{ d: '2012-10-29', visits: 1420 },
-	{ d: '2012-10-30', visits: 1529 },
-	{ d: '2012-10-31', visits: 1892 },
+	{ d: '2012-10-01', Perqs: 80 },
+	{ d: '2012-10-02', Perqs: 78 },
+	{ d: '2012-10-03', Perqs:  82 },
+	{ d: '2012-10-04', Perqs: 83 },
+	{ d: '2012-10-05', Perqs: 79 },
+	{ d: '2012-10-06', Perqs: 89 },
+	{ d: '2012-10-07', Perqs: 70 },
+	{ d: '2012-10-08', Perqs: 180 },
+	{ d: '2012-10-09', Perqs: 152 },
+	{ d: '2012-10-10', Perqs: 120 },
+	{ d: '2012-10-11', Perqs: 82 },
+	{ d: '2012-10-12', Perqs: 89 },
+	{ d: '2012-10-13', Perqs: 60 },
+	{ d: '2012-10-14', Perqs: 89 },
+	{ d: '2012-10-15', Perqs: 87 },
+	{ d: '2012-10-16', Perqs: 103 },
+	{ d: '2012-10-17', Perqs: 112 },
+	{ d: '2012-10-18', Perqs: 124 },
+	{ d: '2012-10-19', Perqs: 139 },
+	{ d: '2012-10-20', Perqs: 139 },
+	{ d: '2012-10-21', Perqs: 90 },
+	{ d: '2012-10-22', Perqs: 80 },
+	{ d: '2012-10-23', Perqs: 73 },
+	{ d: '2012-10-24', Perqs: 123 },
+	{ d: '2012-10-25', Perqs: 103 },
+	{ d: '2012-10-26', Perqs: 70 },
+	{ d: '2012-10-27', Perqs: 75 },
+	{ d: '2012-10-28', Perqs: 72 },
+	{ d: '2012-10-29', Perqs: 61 },
+	{ d: '2012-10-30', Perqs: 77 },
+	{ d: '2012-10-31', Perqs: 80 },
   ],
-  // The name of the data record attribute that contains x-visitss.
+  // The name of the data record attribute that contains x-Perqss.
   xkey: 'd',
-  // A list of names of data record attributes that contain y-visitss.
-  ykeys: ['visits'],
+  // A list of names of data record attributes that contain y-Perqss.
+  ykeys: ['Perqs'],
   // Labels for the ykeys -- will be displayed when you hover over the
   // chart.
-  labels: ['Visits'],
+  labels: ['Perqs'],
   // Disables line smoothing
   smooth: false,
 });
@@ -52,10 +52,10 @@ Morris.Area({
 Morris.Donut({
   element: 'morris-chart-donut',
   data: [
-    {label: "Referral", value: 42.7},
-    {label: "Direct", value: 8.3},
-    {label: "Social", value: 12.8},
-    {label: "Organic", value: 36.2}
+    {label: "Health & Wellness", value: 42.7},
+    {label: "Entertainment", value: 8.3},
+    {label: "Travel", value: 12.8},
+    {label: "Services", value: 36.2}
   ],
   formatter: function (y) { return y + "%" ;}
 });
@@ -66,45 +66,24 @@ Morris.Line({
   // Chart data records -- each entry in this array corresponds to a point on
   // the chart.
   data: [
-	{ d: '2012-10-01', visits: 802 },
-	{ d: '2012-10-02', visits: 783 },
-	{ d: '2012-10-03', visits:  820 },
-	{ d: '2012-10-04', visits: 839 },
-	{ d: '2012-10-05', visits: 792 },
-	{ d: '2012-10-06', visits: 859 },
-	{ d: '2012-10-07', visits: 790 },
-	{ d: '2012-10-08', visits: 1680 },
-	{ d: '2012-10-09', visits: 1592 },
-	{ d: '2012-10-10', visits: 1420 },
-	{ d: '2012-10-11', visits: 882 },
-	{ d: '2012-10-12', visits: 889 },
-	{ d: '2012-10-13', visits: 819 },
-	{ d: '2012-10-14', visits: 849 },
-	{ d: '2012-10-15', visits: 870 },
-	{ d: '2012-10-16', visits: 1063 },
-	{ d: '2012-10-17', visits: 1192 },
-	{ d: '2012-10-18', visits: 1224 },
-	{ d: '2012-10-19', visits: 1329 },
-	{ d: '2012-10-20', visits: 1329 },
-	{ d: '2012-10-21', visits: 1239 },
-	{ d: '2012-10-22', visits: 1190 },
-	{ d: '2012-10-23', visits: 1312 },
-	{ d: '2012-10-24', visits: 1293 },
-	{ d: '2012-10-25', visits: 1283 },
-	{ d: '2012-10-26', visits: 1248 },
-	{ d: '2012-10-27', visits: 1323 },
-	{ d: '2012-10-28', visits: 1390 },
-	{ d: '2012-10-29', visits: 1420 },
-	{ d: '2012-10-30', visits: 1529 },
-	{ d: '2012-10-31', visits: 1892 },
+	{ d: '2012-10-01', Cost: 120 },
+	{ d: '2012-10-02', Cost: 111 },
+	{ d: '2012-10-03', Cost: 82 },
+	{ d: '2012-10-04', Cost: 83 },
+	{ d: '2012-10-05', Cost: 79 },
+	{ d: '2012-10-06', Cost: 101 },
+	{ d: '2012-10-07', Cost: 90 },
+	{ d: '2012-10-08', Cost: 103 },
+	{ d: '2012-10-09', Cost: 110 },
+	{ d: '2012-10-10', Cost: 82 },
   ],
-  // The name of the data record attribute that contains x-visitss.
+  // The name of the data record attribute that contains x-Perqss.
   xkey: 'd',
-  // A list of names of data record attributes that contain y-visitss.
-  ykeys: ['visits'],
+  // A list of names of data record attributes that contain y-Perqss.
+  ykeys: ['Cost'],
   // Labels for the ykeys -- will be displayed when you hover over the
   // chart.
-  labels: ['Visits'],
+  labels: ['Cost'],
   // Disables line smoothing
   smooth: false,
 });
@@ -112,16 +91,16 @@ Morris.Line({
 Morris.Bar ({
   element: 'morris-chart-bar',
   data: [
-	{device: 'iPhone', geekbench: 136},
-	{device: 'iPhone 3G', geekbench: 137},
-	{device: 'iPhone 3GS', geekbench: 275},
-	{device: 'iPhone 4', geekbench: 380},
-	{device: 'iPhone 4S', geekbench: 655},
-	{device: 'iPhone 5', geekbench: 1571}
+	{device: 'Yoga Studio', geekbench: 5},
+	{device: 'Six Flags', geekbench: 7},
+	{device: 'Broadway', geekbench: 12},
+	{device: 'Maid Services', geekbench: 19},
+	{device: 'Booze Cruise', geekbench: 19},
+	{device: 'AMC Movies', geekbench: 27}
   ],
   xkey: 'device',
   ykeys: ['geekbench'],
-  labels: ['Geekbench'],
+  labels: ['Guppies Inc.'],
   barRatio: 0.4,
   xLabelAngle: 35,
   hideHover: 'auto'
