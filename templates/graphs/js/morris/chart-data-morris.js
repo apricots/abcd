@@ -34,7 +34,9 @@ Morris.Donut({
     {label: "Health & Wellness", value: 42.7},
     {label: "Entertainment", value: 8.3},
     {label: "Travel", value: 12.8},
-    {label: "Services", value: 36.2}
+    {label: "Services", value: 36.2},
+    {label: "Travel", value: 22.8},
+    {label: "Services", value: 31.2},
   ],
   formatter: function (y) { return y + "%" ;}
 });
@@ -48,6 +50,10 @@ Morris.Line({
 	{ d: '2012-10-01', Cost: 120 },
 	{ d: '2012-10-02', Cost: 111 },
 	{ d: '2012-10-03', Cost: 82 },
+  { d: '2012-10-07', Cost: 90 },
+  { d: '2012-10-08', Cost: 103 },
+  { d: '2012-10-09', Cost: 110 },
+  { d: '2012-10-10', Cost: 82 },
 	{ d: '2012-10-04', Cost: 83 },
 	{ d: '2012-10-05', Cost: 79 },
 	{ d: '2012-10-06', Cost: 101 },
@@ -70,12 +76,12 @@ Morris.Line({
 Morris.Bar ({
   element: 'morris-chart-bar',
   data: [
-	{device: 'Yoga Studio', geekbench: 5},
-	{device: 'Six Flags', geekbench: 7},
-	{device: 'Broadway', geekbench: 12},
-	{device: 'Maid Services', geekbench: 19},
-	{device: 'Booze Cruise', geekbench: 19},
-	{device: 'AMC Movies', geekbench: 27}
+	{device: 'February', geekbench: 51},
+	{device: 'March', geekbench: 47},
+	{device: 'April', geekbench: 59},
+	{device: 'May', geekbench: 57},
+	{device: 'June', geekbench: 53},
+	{device: 'July', geekbench: 31}
   ],
   xkey: 'device',
   ykeys: ['geekbench'],
