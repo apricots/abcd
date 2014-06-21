@@ -1,0 +1,34 @@
+<div class="container posts-page">
+
+  <div class="post row" ng-repeat="(dealId, deal) in deals">
+    <div class="col-xs-1">
+      <div class="vote up"><span ng-hide="downVoted(deal)" ng-click="upVotedeal(dealId, upVoted(deal))">&#x25B2;</span></div>
+
+      <div class="vote down"><span ng-hide="upVoted(deal)" ng-click="downVotedeal(dealId, downVoted(deal))">&#x25BC;</span></div>
+    </div>
+    <div class="col-md-9 col-xs-11">
+
+      <div class="info">
+        <a href="{{ deal.url }}">
+          {{ deal.title }}
+          <span class="url">({{ deal.url | hostnameFromUrl }})</span>
+        </a>
+      </div>
+      <div>
+        <span>{{ deal.usersActive || 0 }} users active</span>
+        &mdash;
+        <span>{{ deal.usersInterested || 0 }} users interested</span>
+        &mdash;
+        <span>submitted by <a href="#/users/{{ deal.owner }}">{{ deal.owner }}</a></span>
+        &mdash;
+        <a href="#/deals/{{ dealId }}">details</a>
+        <a ng-click="deletedeal(dealId)">delete</a>
+      </div>
+    </div>
+    <div class="col-md-2">
+      
+    </div>
+
+  </div>
+
+</div>
