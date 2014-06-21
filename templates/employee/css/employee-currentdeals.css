@@ -1,0 +1,58 @@
+body{
+  font-family: 'Roboto', sans-serif;
+}
+
+.discount{
+  background-color: #ffffff;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color:#ffffff;
+}
+
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+a:hover{
+  text-decoration: none;
+  color: white;
+}
+
+.discount-title{
+  font-size: 20px;
+}
+
+.green {
+  background-color: #41A389;
+}
+
+.red {
+  background-color: #DC4A48;
+}
+
+.purple {
+  background-color: #5065A3
+}
+
+.brown {
+  background-color: #70615E;
+}
+
+.yellow {
+  background-color: #F5C04D;
+}
+
+.searching {
+  padding-left: 20px;
+  padding-bottom: 15px;
+}
+
+.category-sort{
+  float:left;
+  padding-right: 20px;
+  padding-left: 20px;
+}
