@@ -9,15 +9,19 @@ app.controller('NavCtrl', function ($scope, $rootScope, $location, Post, Auth, U
       $scope.showPanel = true;
     }
 
-    $scope.showAddNewDeal = false;
+    
 
-    if (User.getCurrent()) {
-      runUserChecks();
-    } else {
-      $rootScope.$on('userReady', function(e) {
-          runUserChecks();
-        });
-    }
+    $scope.$on('$locationChangeStart', function(event) {
+      $scope.showAddNewDeal = false;
+      if (User.getCurrent()) {
+        runUserChecks();
+      } else {
+        $rootScope.$on('userReady', function(e) {
+            runUserChecks();
+          });
+      }
+    });
+    
 
     function runUserChecks() {
       var user = User.getCurrent();
