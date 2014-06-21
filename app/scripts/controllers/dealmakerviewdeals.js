@@ -1,10 +1,15 @@
 'use strict';
 
-app.controller('DealMakerViewDealsCtrl', function ($scope, $routeParams, Post) {
+app.controller('DealMakerViewDealsCtrl', function ($scope, $rootScope, $resource, User, Deal) {
 
-    //$scope.post = Deals.find($routeParams.dealMakerId);
+	$scope.deals = [];
 
-    $scope.deals = [];
 
+    $rootScope.$on('userReady', function(e) {
+        var user = User.getCurrent();
+        Deal.dealsByUserResource.get({username:user.username}, function(deals) {
+        	$scope.deals = deals;
+        });
+      });
     
 });
