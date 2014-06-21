@@ -1,1 +1,49 @@
-( deal maker new deal )
+ <form class="form-horizontal well" role="form" ng-submit="submitDeal()">
+  <div class="form-group">
+    <label for="inputEmail3" class="col-sm-2 control-label">Perq Title</label>
+    <div class="col-sm-10">
+      <input type="text" ng-model="deal.title" class="form-control" id="inputEmail3" placeholder="ex. Movie Tickets - 10% off">
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="inputPassword3" class="col-sm-2 control-label">Description</label>
+    <div class="col-sm-10">
+      <textarea class="form-control" ng-model="deal.description" rows="2" placeholder='ex. Take 10% off any movie of your choice. Not valid Fridays and Saturdays after 7:00 PM'></textarea>
+    </div>
+  </div>
+    <div class="form-group">
+    <label for="inputPassword3" class="col-sm-2 control-label">Category</label>
+    <div class="col-sm-10">
+      <select ng-model="deal.category" class="form-control">
+	  <option selected>Health & Wellness</option>
+	  <option>Entertainment</option>
+	  <option>Gifts & Shopping</option>
+	  <option>Travel</option>
+	  <option>Services</option>
+	</select>
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="inputEmail3" class="col-sm-2 control-label">Cost to Employer</label>
+    <div class="col-sm-10">
+      <input type="text" ng-model="deal.cost" class="form-control" id="inputEmail3" placeholder="$">
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="inputEmail3" class="col-sm-2 control-label">Perq Active</label>
+    <div class="col-sm-10">
+      <input type="date" ng-model="deal.activeDate" class="form-control" id="inputEmail3" placeholder="mm/dd/yy">
+    </div>
+  </div>
+    <div class="form-group">
+    <label for="inputEmail3" class="col-sm-2 control-label">Perq Expiration</label>
+    <div class="col-sm-10">
+      <input type="date" ng-model="deal.expirationDate" class="form-control" id="inputEmail3" placeholder="mm/dd/yy">
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <button type="submit" class="btn btn-green">Submit</button>
+    </div>
+  </div>
+</form>

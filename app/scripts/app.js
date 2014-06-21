@@ -21,9 +21,21 @@ app.config(function ($routeProvider) {
 			templateUrl: 'views/showpost.html',
 			controller: 'PostViewCtrl'
 		})
-		.when('/dealMakerViewDeals/:dealMakerId', {
+		.when('/dealMakerViewDeals', {
 			templateUrl: 'views/dealmakerviewdeals.html',
 			controller: 'DealMakerViewDealsCtrl'
+		})
+		.when('/dealMakerNewDeal', {
+			templateUrl: 'views/dealmakernewdeal.html',
+			controller: 'DealMakerNewDealCtrl'
+		})
+		.when('/companyViewDeals', {
+			templateUrl: 'views/companyviewdeals.html',
+			controller: 'CompanyViewDealsCtrl'
+		})
+		.when('/employeeViewDeals', {
+			templateUrl: 'views/employeeviewdeals.html',
+			controller: 'EmployeeViewDealsCtrl'
 		})
 		.when('/register', {
 			templateUrl: 'views/register.html',
