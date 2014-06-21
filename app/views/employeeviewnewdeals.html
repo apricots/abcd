@@ -1,23 +1,34 @@
 <link href="styles/thumbnail-gallery.css" rel="stylesheet">
 <link href="styles/employee-currentdeals.css" rel="stylesheet">
 
+
 <div class="row">
-          <div class="col-lg-12">
-            <h1>Recent Activity <small></small></h1>
-            <div class="alert alert-success">
-              <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-              (3) Employees have requested new deals since you last logged in.
+
+            <div class="col-lg-12">
+                <h1 class="page-header">New Perqs</h1>
+
             </div>
-          </div>
-        </div><!-- /.row -->
 
-<a href="#/companyViewRequests">
-<img src="http://i.imgur.com/wumzzfT.png">
-</a>
+        <!-- Small button group -->
+<div class="btn-group category-sort">
+  <button type="button" class="btn btn-default">Health & Wellness</button>
+  <button type="button" class="btn btn-default">Entertainment</button>
+  <button type="button" class="btn btn-default">Gifts & Shopping</button>
+  <button type="button" class="btn btn-default">Travel</button>
+  <button type="button" class="btn btn-default">Services</button>
+</div>
+            <!-- Search Bar -->
 
-<div class="row">
-          <div class="col-lg-12">
-            <h2>Current Active Perqs</h2>
+        <form class="form-search searching">
+            <div class="input-append">
+                <input type="text" class="span2 search-query">
+                <button type="submit" class="btn-sm">Search New Perqs</button>
+                <button type="button" class="btn-sm" ng-click="goToCurrentDeals()"><span class="glyphicon glyphicon-backward"></span> Back to Current Perqs</button>
+            </div>
+        </form>
+<div class='clearfix'></div>
+
+            <!-- Current Deal Box Display -->    
             <div class="col-lg-3 col-md-4 col-xs-6 thumb">
                 <a class="thumbnail green">
                     <div class="discount green">
@@ -25,7 +36,7 @@
                         <hr>
                         <p class='description'>Receive 10% off any movie ticket. Not valid on Friday and Saturday nights after 7pm.</p>
                         <hr>
-                        <center><button type="button" class="btn btn-default">Details</button></center>
+                        <center><button type="button" class="btn btn-default">Gimme</button></center>
                     </div>
                 </a>
             </div>
@@ -36,7 +47,7 @@
                         <hr>
                         <p class='description'>Receive 10% off any movie ticket. Not valid on Friday and Saturday nights after 7pm.</p>
                         <hr>
-                        <center><button type="button" class="btn btn-default">Details</button></center>
+                        <center><button type="button" class="btn btn-default">Gimme</button></center>
                     </div>
                 </a>
             </div>
@@ -47,7 +58,7 @@
                         <hr>
                         <p class='description'>Receive 10% off any movie ticket. Not valid on Friday and Saturday nights after 7pm.</p>
                         <hr>
-                        <center><button type="button" class="btn btn-default">Details</button></center>
+                        <center><button type="button" class="btn btn-default">Gimme</button></center>
                     </div>
                 </a>
             </div>
@@ -58,7 +69,7 @@
                         <hr>
                         <p class='description'>Receive 10% off any movie ticket. Not valid on Friday and Saturday nights after 7pm.</p>
                         <hr>
-                        <center><button type="button" class="btn btn-default">Details</button></center>
+                        <center><button type="button" class="btn btn-default">Gimme</button></center>
                     </div>
                 </a>
             </div>
@@ -69,7 +80,7 @@
                         <hr>
                         <p class='description'>Receive 10% off any movie ticket. Not valid on Friday and Saturday nights after 7pm.</p>
                         <hr>
-                        <center><button type="button" class="btn btn-default">Details</button></center>
+                        <center><button type="button" class="btn btn-default">Gimme</button></center>
                     </div>
                 </a>
             </div>
@@ -80,7 +91,7 @@
                         <hr>
                         <p class='description'>Receive 10% off any movie ticket. Not valid on Friday and Saturday nights after 7pm.</p>
                         <hr>
-                        <center><button type="button" class="btn btn-default">Details</button></center>
+                        <center><button type="button" class="btn btn-default">Gimme</button></center>
                     </div>
                 </a>
             </div>
@@ -91,7 +102,7 @@
                         <hr>
                         <p class='description'>Receive 10% off any movie ticket. Not valid on Friday and Saturday nights after 7pm.</p>
                         <hr>
-                        <center><button type="button" class="btn btn-default">Details</button></center>
+                        <center><button type="button" class="btn btn-default">Gimme</button></center>
                     </div>
                 </a>
             </div>
@@ -102,7 +113,7 @@
                         <hr>
                         <p class='description'>Receive 10% off any movie ticket. Not valid on Friday and Saturday nights after 7pm.</p>
                         <hr>
-                        <center><button type="button" class="btn btn-default">Details</button></center>
+                        <center><button type="button" class="btn btn-default">Gimme</button></center>
                     </div>
                 </a>
             </div>
@@ -113,7 +124,7 @@
                         <hr>
                         <p class='description'>Receive 10% off any movie ticket. Not valid on Friday and Saturday nights after 7pm.</p>
                         <hr>
-                        <center><button type="button" class="btn btn-default">Details</button></center>
+                        <center><button type="button" class="btn btn-default">Gimme</button></center>
                     </div>
                 </a>
             </div>
@@ -124,7 +135,7 @@
                         <hr>
                         <p class='description'>Receive 10% off any movie ticket. Not valid on Friday and Saturday nights after 7pm.</p>
                         <hr>
-                        <center><button type="button" class="btn btn-default">Details</button></center>
+                        <center><button type="button" class="btn btn-default">Gimme</button></center>
                     </div>
                 </a>
             </div>
@@ -135,7 +146,7 @@
                         <hr>
                         <p class='description'>Receive 10% off any movie ticket. Not valid on Friday and Saturday nights after 7pm.</p>
                         <hr>
-                        <center><button type="button" class="btn btn-default">Details</button></center>
+                        <center><button type="button" class="btn btn-default">Gimme</button></center>
                     </div>
                 </a>
             </div>
@@ -146,11 +157,8 @@
                         <hr>
                         <p class='description'>Receive 10% off any movie ticket. Not valid on Friday and Saturday nights after 7pm.</p>
                         <hr>
-                        <center><button type="button" class="btn btn-default">Details</button></center>
+                        <center><button type="button" class="btn btn-default">Gimme</button></center>
                     </div>
                 </a>
             </div>
-        </div>
-
-          </div>
         </div>

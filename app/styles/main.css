@@ -1,7 +1,7 @@
 body {
-  background: #F3F3F3;
+  background: #FFFFFF;
+  font-family: 'Roberto', sans-serif;
 }
-
 
 /* NAV BAR */
 .nav-pic {
@@ -11,6 +11,15 @@ body {
   -moz-border-radius: 100px;
   border-radius: 100px;
 }
+
+.black-bar {
+  background: #202020;
+}
+
+.black-bar a {
+  color: #EFEFEF !important;
+}
+
 
 
 /* MAIN POSTS PAGE */
@@ -61,7 +70,7 @@ body {
 .auth-forms {
   max-width:400px;
   margin:0 auto;
-  background: #fff;
+  background: #EFEFEF;
   padding:1px 25px 25px 25px;
   -moz-box-shadow: 0 0 5px rgba(0,0,0,0.2);
   -webkit-box-shadow: 0 0 5px rgba(0,0,0,0.2);

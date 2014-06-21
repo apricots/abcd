@@ -4,12 +4,20 @@ app.controller('DealMakerViewDealsCtrl', function ($scope, $rootScope, $resource
 
 	$scope.deals = [];
 
+	if (User.getCurrent()) {
+		loadDeals();
+	} else {
+		$rootScope.$on('userReady', function(e) {
+	    	loadDeals();
+	    });
+	}
 
-    $rootScope.$on('userReady', function(e) {
-        var user = User.getCurrent();
-        Deal.dealsByUserResource.get({username:user.username}, function(deals) {
-        	$scope.deals = deals;
-        });
-      });
+	function loadDeals() {
+		var user = User.getCurrent();
+		Deal.dealsByUserResource.get({username:user.username}, function(deals) {
+			$scope.deals = deals;
+		});
+	}
+    
     
 });

@@ -1,12 +1,31 @@
 'use strict';
 
-app.controller('NavCtrl', function ($scope, $location, Post, Auth) {
+app.controller('NavCtrl', function ($scope, $rootScope, $location, Post, Auth, User) {
 
     $scope.showPanel = true;
     if ($location.path() === '/') {
       $scope.showPanel = false;
     } else {
       $scope.showPanel = true;
+    }
+
+    $scope.showAddNewDeal = false;
+
+    if (User.getCurrent()) {
+      runUserChecks();
+    } else {
+      $rootScope.$on('userReady', function(e) {
+          runUserChecks();
+        });
+    }
+
+    function runUserChecks() {
+      var user = User.getCurrent();
+      if (user.role === "DealMaker") {
+        $scope.showAddNewDeal = true;
+      } else {
+        $scope.showAddNewDeal = false;
+      }
     }
 
     $scope.post = {url: 'http://', title: ''};
@@ -20,6 +39,10 @@ app.controller('NavCtrl', function ($scope, $location, Post, Auth) {
 
     $scope.logout = function () {
       Auth.logout();
+    };
+
+    $scope.goToNewDeal = function() {
+      $location.path('/dealMakerNewDeal');
     };
 
   });

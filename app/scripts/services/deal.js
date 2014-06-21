@@ -30,7 +30,10 @@ app.factory('Deal', function($resource, $firebase, FIREBASE_URL, User) {
       if (User.signedIn()) {
         var user = User.getCurrent();
 
-        return deals.$child("dealsByUser").$child(user.username).$add(deal);
+        return deals.$child("dealsByUser").$child(user.username).$add(deal).then(function() {
+          return deals.$child("allDeals").$add(deal);
+        });
+        
       }
     },
     update: function(dealId, deal) {

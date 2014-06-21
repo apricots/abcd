@@ -33,9 +33,17 @@ app.config(function ($routeProvider) {
 			templateUrl: 'views/companyviewdeals.html',
 			controller: 'CompanyViewDealsCtrl'
 		})
+		.when('/companyViewRequests', {
+			templateUrl: 'views/companyviewrequests.html',
+			controller: 'CompanyViewRequestsCtrl'
+		})
 		.when('/employeeViewDeals', {
 			templateUrl: 'views/employeeviewdeals.html',
 			controller: 'EmployeeViewDealsCtrl'
+		})
+		.when('/employeeViewNewDeals', {
+			templateUrl: 'views/employeeviewnewdeals.html',
+			controller: 'EmployeeViewNewDealsCtrl'
 		})
 		.when('/register', {
 			templateUrl: 'views/register.html',
