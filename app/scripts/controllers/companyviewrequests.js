@@ -1,6 +1,6 @@
 'use strict';
 
-app.controller('CompanyViewRequestsCtrl', function ($scope) {
+app.controller('CompanyViewRequestsCtrl', function () {
 
 
 

@@ -15,6 +15,6 @@ app.controller('DealMakerNewDealCtrl', function ($scope, $location, Deal) {
 
 	$scope.cancelDeal = function() {
 		$location.path('/dealMakerViewDeals');
-	}
+	};
     
 });

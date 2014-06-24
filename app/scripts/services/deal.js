@@ -8,9 +8,6 @@ app.factory('Deal', function($resource, $firebase, FIREBASE_URL, User) {
   var dealRevisionsRef = new Firebase(FIREBASE_URL + 'dealRevisions');
   var dealRevisions = $firebase(dealRevisionsRef);
 
-  var dealNumberCounterRef = new Firebase(FIREBASE_URL + 'dealNumberCounter');
-  var dealNumberCounter = $firebase(dealNumberCounterRef);
-
   var getDealRevisionCounter = function(dealId) {
     var dealRevisionCounterRef = new Firebase(FIREBASE_URL + 'dealRevisions/' + dealId + '/revisionCounter');
     var dealRevisionCounter = $firebase(dealRevisionCounterRef);
@@ -30,8 +27,8 @@ app.factory('Deal', function($resource, $firebase, FIREBASE_URL, User) {
       if (User.signedIn()) {
         var user = User.getCurrent();
 
-        return deals.$child("dealsByUser").$child(user.username).$add(deal).then(function() {
-          return deals.$child("allDeals").$add(deal);
+        return deals.$child('dealsByUser').$child(user.username).$add(deal).then(function() {
+          return deals.$child('allDeals').$add(deal);
         });
         
       }
