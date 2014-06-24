@@ -2,16 +2,19 @@
 
 app.controller('NavCtrl', function ($scope, $rootScope, $location, Post, Auth, User) {
 
-    $scope.showPanel = true;
-    if ($location.path() === '/') {
-      $scope.showPanel = false;
-    } else {
-      $scope.showPanel = true;
+    $scope.showPanel = false;
+
+    function checkPath(path) {
+      if (path === '/') {
+        $scope.showPanel = false;
+      } else {
+        $scope.showPanel = true;
+      }
     }
+    checkPath($location.path());    
 
-    
-
-    $scope.$on('$locationChangeStart', function(event) {
+    $scope.$on('$locationChangeStart', function(event, next, current) {
+      checkPath(next);
       $scope.showAddNewDeal = false;
       if (User.getCurrent()) {
         runUserChecks();
